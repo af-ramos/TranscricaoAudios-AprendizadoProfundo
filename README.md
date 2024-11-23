@@ -1,4 +1,4 @@
-# implementacaoDeia
+# Projeto de Implementação - DEIA
 
 O projeto consiste em um aplicativo _mobile_ para transcrever imagens em áudios buscando ampliar a acessibilidade e permitir uma maior capacidade de visualização de imagens, através de outros meios.
 

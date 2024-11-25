@@ -8,7 +8,7 @@ class ApiTranscribe{
 
 static const String endpoint = "http://192.168.15.69:8080";
 
-static Future<void>  uploadPhoto(File image) async {
+static Future<void>  uploadPhoto(File image, int model) async {
   Uint8List imageBytes = File(image.path).readAsBytesSync();
 
   http.MultipartRequest request = http.MultipartRequest('POST', Uri.parse("$endpoint/transcribe"));
@@ -17,6 +17,7 @@ static Future<void>  uploadPhoto(File image) async {
     'file', imageBytes, filename: 'teste', contentType: MediaType.parse(lookupMimeType(image.path) ?? 'application/octet-stream'));
 
   request.files.add(imageHttp);
+  request.fields['model'] = model.toString();
 
   var response = await request.send();
 

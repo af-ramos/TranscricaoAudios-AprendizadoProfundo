@@ -2,8 +2,10 @@ import 'dart:async';
 import 'dart:io';
 
 import 'package:app_deia/apis/api_transcribe.dart';
+import 'package:app_deia/controller/ct_options.dart';
 import 'package:camera/camera.dart';
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
 
 class TakePictureScreen extends StatefulWidget {
   const TakePictureScreen({
@@ -112,6 +114,9 @@ class DisplayPictureScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     File file = File(imagePath);
 
+    OptionsController optionsController =
+        Provider.of<OptionsController>(context, listen: false);
+
     return Scaffold(
       appBar: AppBar(title: const Text('Sua foto')),
       body: Padding(
@@ -131,7 +136,7 @@ class DisplayPictureScreen extends StatelessWidget {
         IconButton.filled(
             iconSize: 32,
             onPressed: () {
-              ApiTranscribe.uploadPhoto(file);
+              ApiTranscribe.uploadPhoto(file, optionsController.getActiveModel());
               Navigator.pushNamed(context, '/audio',
                   arguments: {'filepath': imagePath});
             },

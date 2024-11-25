@@ -22,11 +22,9 @@ def transcribe():
     text = textService.translate(f'api/img/{file.filename}')
 
     audioService = Text2Speech()
-    audio = audioService.translate(text)
-
-    return ''
+    audioService.translate(text)
     
-    # return send_file("teste.m4a", mimetype="audio/m4a", as_attachment=True)
+    return send_file("audio/output.wav", mimetype = "audio/wav", as_attachment = True)
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=8080, debug=True)

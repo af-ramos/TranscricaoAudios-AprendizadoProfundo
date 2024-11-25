@@ -7,6 +7,8 @@ Foi separado em dois projetos principais:
 - **api:** responsável pela conexão entre os modelos com a aplicação.
 - **app:** responsável pela interface de usuário da aplicação.
 
+Com a API em funcionamento, a aplicação pode ser testada tanto via aplicativo móvel quanto via _POST_ (_Postman_, por exemplo), apenas apontando para o _IP:PORTA_ do servidor com a rota `transcribe`, com os parâmetros `file` e `model`, sendo `model` variando entre 1 (_EasyOCR_) e 2 (_Tesseract_).
+
 ---
 
 O atual projeto de implementação se trata de um trabalho trabalho realizado para a disciplina de "Aprendizado Profundo" do "Programa de Pós-Graduação em Ciência da Computação

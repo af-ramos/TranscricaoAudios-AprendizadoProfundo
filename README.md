@@ -5,7 +5,7 @@ O projeto consiste em um aplicativo _mobile_ para transcrever imagens em áudios
 Foi separado em dois projetos principais:
 
 - **api:** responsável pela conexão entre os modelos com a aplicação.
-- **aplicacao:** responsável pela interface de usuário da aplicação.
+- **app:** responsável pela interface de usuário da aplicação.
 
 ---
 

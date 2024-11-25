@@ -2,9 +2,8 @@
 
 O projeto consiste em um aplicativo _mobile_ para transcrever imagens em áudios buscando ampliar a acessibilidade e permitir uma maior capacidade de visualização de imagens, através de outros meios.
 
-Foi separado em três projetos principais:
+Foi separado em dois projetos principais:
 
-- **avaliacao:** responsável pela avaliação e teste dos modelos.
 - **api:** responsável pela conexão entre os modelos com a aplicação.
 - **aplicacao:** responsável pela interface de usuário da aplicação.
 
